@@ -1407,7 +1407,7 @@ extract_spectra_from_polygon_r <- function(site, year, data_int_path, data_final
           # lead to a single extracted pixel per tree. 
           
           shapes_in_spv <- terra::vect(shapes_in)
-          extracted_spectra <- terra::extract(stacked_aop_data, shapes_in_spv, ID=TRUE) %>%
+          extracted_spectra <- terra::extract(stacked_aop_data, shapes_in_spv, ID=TRUE, xy=TRUE) %>%
               left_join(data.frame(shapeID = shapes_in_spv$shapeID, 
                                     ID = 1:nrow(shapes_in_spv))) %>%
               dplyr::select(-ID)

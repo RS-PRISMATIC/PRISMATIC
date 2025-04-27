@@ -12,7 +12,7 @@ plot_length: 100
 px_thresh: 2
 ntree: 5000
 min_distance: 20
-use_tiles_w_veg: True #turn this to false in order to stack imagery across entire flight box
+use_tiles_w_veg: False #turn this to false in order to stack imagery across entire flight box
 randomMinSamples: False
 aggregate_from_1m_to_2m_res: False
 independentValidationSet: True
